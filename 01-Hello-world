@@ -1,3 +1,9 @@
 #!/bin/bash
 
 echo "iam learning devops and git now onwards"
+
+echo "Ramesh: Hi suresh,Good morning"
+echo "Suresh: Good morning ramesh"
+echo "Ramesh: Hi suresh,how r u "
+echo "Suresh: fine how r u "
+
