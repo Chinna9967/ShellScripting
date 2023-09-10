@@ -2,8 +2,11 @@
 
 echo "iam learning devops and git now onwards"
 
-echo "Ramesh: Hi suresh,Good morning"
-echo "Suresh: Good morning ramesh"
-echo "Ramesh: Hi suresh,how r u "
-echo "Suresh: fine how r u "
+person1=Ramesh
+person2=Suresh
+
+echo "$person1: Hi $person2,Good morning"
+echo "$person2: Good morning $person1"
+echo "$person1: Hi $person2,how r u "
+echo "$person2: fine how r u $person1"
 
