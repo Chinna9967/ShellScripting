@@ -6,14 +6,17 @@ DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 VALIDATE(){
     # $1 --it will receive the argument1
     if [ $1 -ne 0 ]
     then
-        echo "$2......error"
+        echo "$2......$R error $N"
         exit 1
     else
-        echo "$2.....success"
+        echo "$2.....$G success $N"
     fi
 }
 
