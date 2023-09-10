@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Print if the number is grater than 10 or not
+NUMBER=$1
+
+if[ $NUMBER -gt 19 ]
+then
+    echo "$NUMBER is greater than 10"
+else
+    echo "$NUMBER is not grearer than 10"
+fi
