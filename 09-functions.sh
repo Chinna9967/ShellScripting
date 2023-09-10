@@ -2,8 +2,10 @@
 
 # our goal is to install mysql 
 
-USERID=$(id -u)
-# THIS FUNCTION SHOULD VALIDATE THE PREV CMD INFORM USER IT IS SUCCESS OR FAILURE
+DATE=$(+%F:%H:%M:%S)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+
 VALIDATE(){
     # $1 --it will receive the argument1
     if [ $1 -ne 0 ]
@@ -15,6 +17,10 @@ VALIDATE(){
     fi
 }
 
+USERID=$(id -u)
+# THIS FUNCTION SHOULD VALIDATE THE PREV CMD INFORM USER IT IS SUCCESS OR FAILURE
+
+
 
 if [ $USERID -ne 0]
 then    
@@ -22,10 +28,10 @@ then
     exit 12
 fi
 
-yum install mysql -y
+yum install mysql -y &>>LOGFILE
 
 VALIDATE $? "Installing mysql"
 
-yum install postfix -y
+yum install postfix -y &>>LOGFILE
 
 VALIDATE $? "Installing postfix"
