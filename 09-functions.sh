@@ -2,7 +2,7 @@
 
 # our goal is to install mysql 
 
-DATE=$(+%F:%H:%M:%S)
+DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
@@ -22,7 +22,7 @@ USERID=$(id -u)
 
 
 
-if [ $USERID -ne 0]
+if [ $USERID -ne 0 ]
 then    
     echo "ERROR: Pleaser run this with root access"
     exit 12
