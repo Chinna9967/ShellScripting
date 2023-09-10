@@ -4,7 +4,7 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 N="\e[om"
-if [ $USERID -ne o ]
+if [ $USERID -ne 0 ]
 then
     echo -e  " $R ERROR: please run this with root access $N"
     exit 1
