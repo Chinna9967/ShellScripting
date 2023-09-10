@@ -9,4 +9,4 @@ then
     exit 12
 fi
 
-yum install git -y
+yum install mysql 
