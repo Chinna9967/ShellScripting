@@ -3,7 +3,7 @@
 # Print if the number is grater than 10 or not
 NUMBER=$1
 
-if[ $NUMBER -gt 19 ]
+if[ $NUMBER -gt 10 ]
 then
     echo "$NUMBER is greater than 10"
 else
