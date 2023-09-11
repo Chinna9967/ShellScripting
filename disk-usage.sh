@@ -28,8 +28,8 @@ do
     # now we need to check ehther it is morethan threshold or not
     if [ $usage -gt $DISK_USAGE_THRESHOLD ]
     then
-        message+="High Disk usage on $partition: $usage"
+        message+="High Disk usage on $partition: $usage \n"
     fi
 done <<< $DISK_USAGE
 
-echo "message: $message"
+echo -e "message: $message"
